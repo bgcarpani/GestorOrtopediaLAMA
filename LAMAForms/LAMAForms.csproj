@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D9889E3-1715-4A46-A63B-22991EC6A62D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LAMAForms</RootNamespace>
+    <AssemblyName>Gestor_LAMA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Bautista\Desktop\lamasetup_2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-419</TargetCulture>
+    <PublisherName>bgcarpani</PublisherName>
+    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>lamaico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0CA93064E9A148F8D444349B400B84CEA0F325B1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LAMAForms_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\SAPBusinessObjects.WPF.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\SAPBusinessObjects.WPF.ViewerShared.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAlquileres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlquileres.Designer.cs">
+      <DependentUpon>frmAlquileres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlquileresAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlquileresAE.Designer.cs">
+      <DependentUpon>frmAlquileresAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAumentosProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAumentosProductos.Designer.cs">
+      <DependentUpon>frmAumentosProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBajaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBajaAlquiler.Designer.cs">
+      <DependentUpon>frmBajaAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarClientes.Designer.cs">
+      <DependentUpon>frmBuscarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProductos.Designer.cs">
+      <DependentUpon>frmBuscarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaja.Designer.cs">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprasAE.Designer.cs">
+      <DependentUpon>frmComprasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCtaCtePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCtaCtePago.Designer.cs">
+      <DependentUpon>frmCtaCtePago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCtasCtes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCtasCtes.Designer.cs">
+      <DependentUpon>frmCtasCtes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDateTimePicker.Designer.cs">
+      <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetalleCtaCte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleCtaCte.Designer.cs">
+      <DependentUpon>frmDetalleCtaCte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEdicionEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdicionEntrega.Designer.cs">
+      <DependentUpon>frmEdicionEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKardex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKardex.Designer.cs">
+      <DependentUpon>frmKardex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalidades.Designer.cs">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocalidadesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalidadesAE.Designer.cs">
+      <DependentUpon>frmLocalidadesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimiento.Designer.cs">
+      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarcasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarcasAE.Designer.cs">
+      <DependentUpon>frmMarcasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdenes.Designer.cs">
+      <DependentUpon>frmOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdenesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdenesAE.Designer.cs">
+      <DependentUpon>frmOrdenesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesAE.Designer.cs">
+      <DependentUpon>frmClientesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalDef.Designer.cs">
+      <DependentUpon>frmPrincipalDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductosAE.Designer.cs">
+      <DependentUpon>frmProductosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProtesis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProtesis.Designer.cs">
+      <DependentUpon>frmProtesis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProtesisAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProtesisAE.Designer.cs">
+      <DependentUpon>frmProtesisAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedoresAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedoresAE.Designer.cs">
+      <DependentUpon>frmProveedoresAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStocks.Designer.cs">
+      <DependentUpon>frmStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTiposAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiposAE.Designer.cs">
+      <DependentUpon>frmTiposAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentasAE.Designer.cs">
+      <DependentUpon>frmVentasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerDetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerDetalleCompra.Designer.cs">
+      <DependentUpon>frmVerDetalleCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerDetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerDetalleVenta.Designer.cs">
+      <DependentUpon>frmVerDetalleVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash1.Designer.cs">
+      <DependentUpon>Splash1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashCargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashCargando.Designer.cs">
+      <DependentUpon>SplashCargando.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAlquileres.resx">
+      <DependentUpon>frmAlquileres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlquileresAE.resx">
+      <DependentUpon>frmAlquileresAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAumentosProductos.resx">
+      <DependentUpon>frmAumentosProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBajaAlquiler.resx">
+      <DependentUpon>frmBajaAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarClientes.resx">
+      <DependentUpon>frmBuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProductos.resx">
+      <DependentUpon>frmBuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaja.resx">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientesAE.resx">
+      <DependentUpon>frmClientesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComprasAE.resx">
+      <DependentUpon>frmComprasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCtaCtePago.resx">
+      <DependentUpon>frmCtaCtePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCtasCtes.resx">
+      <DependentUpon>frmCtasCtes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDateTimePicker.resx">
+      <DependentUpon>frmDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleCtaCte.resx">
+      <DependentUpon>frmDetalleCtaCte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEdicionEntrega.resx">
+      <DependentUpon>frmEdicionEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKardex.resx">
+      <DependentUpon>frmKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalidades.resx">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalidadesAE.resx">
+      <DependentUpon>frmLocalidadesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimiento.resx">
+      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarcasAE.resx">
+      <DependentUpon>frmMarcasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdenes.resx">
+      <DependentUpon>frmOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdenesAE.resx">
+      <DependentUpon>frmOrdenesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalDef.resx">
+      <DependentUpon>frmPrincipalDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductosAE.resx">
+      <DependentUpon>frmProductosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProtesis.resx">
+      <DependentUpon>frmProtesis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProtesisAE.resx">
+      <DependentUpon>frmProtesisAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedoresAE.resx">
+      <DependentUpon>frmProveedoresAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStocks.resx">
+      <DependentUpon>frmStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTiposAE.resx">
+      <DependentUpon>frmTiposAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentasAE.resx">
+      <DependentUpon>frmVentasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerDetalleCompra.resx">
+      <DependentUpon>frmVerDetalleCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerDetalleVenta.resx">
+      <DependentUpon>frmVerDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash1.resx">
+      <DependentUpon>Splash1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashCargando.resx">
+      <DependentUpon>SplashCargando.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="LAMAForms_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LAMADatabase\LAMADatabase.csproj">
+      <Project>{95d9bb6f-05e3-44cd-b4a2-c53f181c990c}</Project>
+      <Name>LAMADatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAMAHelp1\LAMAHelp1.csproj">
+      <Project>{bbb298c7-bbd2-457f-a4cd-11598de4f592}</Project>
+      <Name>LAMAHelp1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAMAModels\LAMAModels.csproj">
+      <Project>{780733a9-cb4a-40da-b1d0-b36e70de9c8a}</Project>
+      <Name>LAMAModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LAMAReportes1\LAMAReportes1.csproj">
+      <Project>{93038527-4E04-4B72-9524-B56B089CDE6E}</Project>
+      <Name>LAMAReportes1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lamaico.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

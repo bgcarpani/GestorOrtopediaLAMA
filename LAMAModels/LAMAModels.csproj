@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{780733A9-CB4A-40DA-B1D0-B36E70DE9C8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LAMAModels</RootNamespace>
+    <AssemblyName>LAMAModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\SAPBusinessObjects.WPF.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\SAPBusinessObjects.WPF.ViewerShared.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.13.0.5.891\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlicuotaIva.cs" />
+    <Compile Include="Alquiler.cs" />
+    <Compile Include="Aumento.cs" />
+    <Compile Include="Caja.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Compra.cs" />
+    <Compile Include="ConsultaCtaCte.cs" />
+    <Compile Include="CtaCte.cs" />
+    <Compile Include="DatosDePersona.cs" />
+    <Compile Include="DetalleAlquiler.cs" />
+    <Compile Include="DetalleCompra.cs" />
+    <Compile Include="DetalleDevolucionCompra.cs" />
+    <Compile Include="DetalleDevolucionVenta.cs" />
+    <Compile Include="DetalleSalida.cs" />
+    <Compile Include="DetalleVenta.cs" />
+    <Compile Include="DevolucionCompra.cs" />
+    <Compile Include="DevolucionCompraDevuelto.cs" />
+    <Compile Include="DevolucionCompraDisponible.cs" />
+    <Compile Include="DevolucionVenta.cs" />
+    <Compile Include="DevolucionVentaDevuelto.cs" />
+    <Compile Include="DevolucionVentaDisponible.cs" />
+    <Compile Include="Domicilio.cs" />
+    <Compile Include="FormaDePago.cs" />
+    <Compile Include="Kardex.cs" />
+    <Compile Include="Localidad.cs" />
+    <Compile Include="Marca.cs" />
+    <Compile Include="Orden.cs" />
+    <Compile Include="Pago.cs" />
+    <Compile Include="Producto.cs" />
+    <Compile Include="ProductoStock.cs" />
+    <Compile Include="ProductoSucursal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protesis.cs" />
+    <Compile Include="Proveedor.cs" />
+    <Compile Include="Provincia.cs" />
+    <Compile Include="Salida.cs" />
+    <Compile Include="SituacionIva.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="Tipo.cs" />
+    <Compile Include="TipoDeProducto.cs" />
+    <Compile Include="TipoTransaccion.cs" />
+    <Compile Include="Transaccion.cs" />
+    <Compile Include="Venta.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
